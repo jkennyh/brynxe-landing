@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it" data-bs-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brynxe™ | Bring your Expertise</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex align-items-center min-vh-100 py-5">
+
+    <div class="container text-center" style="max-width: 600px;">
+        <header class="mb-3">
+            <svg width="250" height="220" viewBox="0 0 250 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="img-fluid" style="max-width: 180px;">
+                <defs>
+                    <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                        <feGaussianBlur stdDeviation="6" result="largeBlur"/>
+                        <feMerge>
+                            <feMergeNode in="largeBlur"/>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+                <style>
+                    .logo-shape {
+                        fill: #00C897; /* Verde Smeraldo Brynxe */
+                        transition: all 0.3s ease;
+                    }
+                    .logo-text {
+                        fill: #1A1A1A; 
+                        font-family: 'Inter', sans-serif;
+                        font-weight: 700;
+                        font-size: 44px;
+                        letter-spacing: -2px;
+                        transition: all 0.3s ease;
+                    }
+                    .tm-text {
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+                    /* Dark Mode specifica interna all'SVG */
+                    @media (prefers-color-scheme: dark) {
+                        .logo-shape {
+                            filter: url(#neon-glow);
+                            fill: #00FFC2;
+                        }
+                        .logo-text {
+                            fill: #FFFFFF;
+                        }
+                    }
+                    /* Supporto per il selettore data-bs-theme di Bootstrap */
+                    [data-bs-theme="dark"] .logo-shape {
+                        filter: url(#neon-glow);
+                        fill: #00FFC2;
+                    }
+                    [data-bs-theme="dark"] .logo-text {
+                        fill: #FFFFFF;
+                    }
+                </style>
+                <g transform="translate(55, 35) scale(0.35)">
+                    <path class="logo-shape" d="M 148.698 294.737 C 142.935 296.155 137.519 296.837 131.976 296.824 C 105.311 296.761 78.646 296.808 51.981 296.778 C 40.9 296.766 35.714 291.727 35.703 280.603 C 35.631 210.108 35.608 139.612 35.637 69.117 C 35.642 57.934 40.69 53.164 52.003 53.162 C 78.002 53.157 104.021 53.829 129.993 53.004 C 162.86 51.961 195.641 75.974 199.997 115.03 C 202.076 133.671 211.512 148.343 223.553 161.553 C 225.589 161.618 226.186 160.301 226.964 159.268 C 241.806 139.575 256.663 119.893 271.458 100.165 C 275.588 94.657 275.501 94.594 270.509 90.029 C 265.256 85.224 260.006 80.416 253.548 74.505 C 282.7 67.087 310.545 60.003 339.893 52.536 C 336.061 81.956 332.394 110.116 328.64 138.939 C 323.174 136.476 320.012 132.519 316.224 129.439 C 305.769 120.94 308.212 119.979 298.886 130.824 C 288.351 143.074 278.038 155.517 267.611 167.86 C 266.988 168.599 266.206 169.203 265.314 170.044 C 261.913 167.514 259.884 164.054 257.38 161.038 C 256.015 159.394 256.857 157.97 258.026 156.601 C 273.382 138.602 288.747 120.612 304.049 102.566 C 305.934 100.343 307.623 99.852 309.848 101.974 C 310.915 102.99 312.176 103.802 313.356 104.712 C 315.79 101.249 318.102 85.191 317.039 78.435 C 309.191 79.436 301.613 81.55 294.188 84.19 C 292.059 84.947 292.283 86.897 293.824 88.182 C 296.499 90.413 295.542 92.44 293.893 94.62 C 291.586 97.671 265.238 132.265 263.187 135.262 C 256.97 144.348 245.284 159.248 235.959 170.986 C 233.639 173.905 233.747 175.842 235.93 178.694 C 250.916 198.278 265.751 217.977 280.63 237.643 C 285.054 243.489 289.459 249.348 293.878 255.197 C 295.218 256.972 296.454 258.593 294.586 260.929 C 292.412 263.647 293.752 265.881 296.57 266.709 C 303.383 268.711 310.309 270.33 317.643 272.221 C 317.739 264.932 316.451 258.431 315.28 251.952 C 314.721 248.855 311.969 248.154 309.404 249.08 C 306.729 250.047 305.329 248.848 303.869 247.106 C 283.96 223.357 264.067 199.594 244.106 175.889 C 242.309 173.756 241.84 171.938 243.858 169.797 C 245.998 167.527 247.29 164.471 250.83 162.466 C 269.507 184.247 288.211 206.061 307.229 228.24 C 314.17 222.474 320.734 217.021 328.331 210.71 C 329.674 220.072 330.852 228.051 331.956 236.041 C 334.369 253.503 336.102 271.062 339.469 288.387 C 339.5 288.55 339.533 288.714 339.563 288.878 C 340.993 296.752 339.708 298.402 332.118 296.144 C 307.69 288.875 282.764 283.524 258.27 276.536 C 257.22 276.237 255.942 276.068 255.258 274.12 C 260.334 269.528 265.398 264.523 270.924 260.092 C 274.804 256.98 275.337 254.719 272.113 250.484 C 243.648 213.099 215.449 175.51 187.109 138.029 C 180.423 129.187 175.109 119.682 171.312 109.238 C 164.145 89.522 150.033 79.868 129.004 79.872 C 108.839 79.876 88.672 79.98 68.509 79.763 C 64.075 79.716 62.799 81.112 62.836 85.474 C 63.034 108.804 63.086 132.138 62.862 155.467 C 62.816 160.225 64.442 161.404 68.882 161.364 C 89.879 161.172 110.879 161.278 131.877 161.217 C 150.131 161.164 164.072 151.428 170.682 134.335 C 171.382 132.523 171.391 130.348 173.488 128.625 C 179.165 136.468 184.848 144.203 190.381 152.044 C 191.85 154.125 190.091 155.837 188.963 157.42 C 184.508 163.677 179.334 169.293 173.489 173.985 C 173.663 176.323 175.375 177.009 176.544 178.103 C 178.247 179.696 180.089 181.147 181.72 182.808 C 192.67 193.959 192.709 195.038 183.566 207.351 C 180.221 211.857 177.047 216.49 173.85 220.986 C 171.598 220.386 171.756 218.653 171.324 217.321 C 165.593 199.641 148.773 187.962 131.259 188.46 C 110.444 189.053 89.598 188.689 68.768 188.477 C 64.148 188.43 62.766 189.961 62.06 194.512 C 63.009 217.842 63.029 241.175 62.858 264.506 C 62.826 268.917 64.213 270.243 68.577 270.201 C 89.407 270.003 110.243 270.31 131.071 270.022 C 149.333 269.769 163.283 261.428 169.635 244.248 C 178.287 220.846 194.477 202.639 208.739 183.035 C 209.396 182.131 210.401 181.48 211.499 180.478 C 215 183.134 217.062 186.756 219.393 190.121 C 220.565 191.813 219.681 193.388 218.513 194.639 C 205.993 208.059 202.231 224.849 198.516 242.202 C 192.751 269.135 175.767 286.769 148.698 294.737 Z" />
+                    <path class="logo-shape" d="M 232.198 209.048 C 224.165 218.808 216.279 228.252 208.36 237.669 C 207.97 238.133 207.29 238.354 206.715 238.707 C 203.534 230.221 213.704 206.185 224.353 197.382 C 227.502 200.807 231.19 203.791 232.198 209.048 Z" />
+                    <path class="logo-shape" d="M 216.161 121.088 C 220.762 126.579 225.202 131.743 229.492 137.028 C 230.873 138.73 231.445 140.425 230.348 143.237 C 223.654 158.396 210.433 131.45 209.552 129.113 C 207.454 123.539 206.193 117.775 205.485 110.282 C 210.355 113.741 213.049 117.384 216.161 121.088 Z" />
+                </g>
+                <text class="logo-text" x="125" y="180" text-anchor="middle">
+                    brynxe<tspan class="tm-text" dy="-18">™</tspan>
+                </text>
+            </svg>
+        </header>
+
+        <main>
+            <span class="badge rounded-pill border border-success text-success bg-success bg-opacity-10 mb-4 px-3 py-2 text-uppercase fw-bold" id="badge-text" style="font-size: 0.75rem;">
+                In arrivo
+            </span>
+            
+            <h1 class="display-4 fw-black mb-3 ls-tight" id="main-title">
+                Bring your Expertise
+            </h1>
+            
+            <p class="lead text-secondary" id="main-description">
+                La prima piattaforma peer-to-peer per scambiare competenze reali. Trasforma il tuo tempo in conoscenza.
+            </p>
+            
+            <div class="mb-5 mt-5">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUoixHzyDJbsuBPtXlyIw1I8d-1hlkO5RdHqFdt0JEhik9cQ/viewform?usp=publish-editor" target="_blank" class="btn btn-success btn-lg px-5 py-3 fw-bold shadow-sm" id="cta-btn">
+					Unisciti alla waitlist
+				</a>
+            </div>
+        </main>
+
+        <footer class="mt-5 pt-5 border-top border-secondary border-opacity-10">
+            <div class="lang-switch mb-3 fw-bold text-secondary">
+                <button class="btn btn-link btn-sm text-decoration-none p-0 text-secondary fw-bold" onclick="setLanguage('it')">IT</button>
+                <span class="mx-2 opacity-25">|</span>
+                <button class="btn btn-link btn-sm text-decoration-none p-0 text-secondary fw-bold" onclick="setLanguage('en')">EN</button>
+            </div>
+            <p class="small text-secondary mb-0">
+                &copy; 2026 Brynxe&trade; — <span id="footer-rights">Tutti i diritti riservati.</span>
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

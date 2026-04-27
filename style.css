@@ -1,0 +1,68 @@
+/* Definizioni font e correzioni spaziatura */
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    font-weight: 900 !important;
+    letter-spacing: -2px;
+}
+
+/* --- COLORE EMERALD --- */
+:root {
+    /* Definiamo il verde smeraldo (0, 200, 151) */
+    --brand-emerald: rgb(0, 200, 151);
+    --brand-emerald-rgb: 0, 200, 151;
+}
+
+/* Sovrascriviamo le utility di testo e bordi success 
+.text-success { color: var(--brand-emerald) !important; }
+.border-success { border-color: var(--brand-emerald) !important; }
+.bg-success { background-color: var(--brand-emerald) !important; }
+*/
+
+/* Colore d'accento Emerald di Bootstrap (sovrascritto leggermente per il brand) */
+.text-success {
+    --bs-success-rgb: 0, 200, 151; /* Il tuo verde Emerald */
+}
+
+/* Sovrascrizione specifica per il pulsante */
+.btn-success {
+    --bs-btn-bg: var(--brand-emerald);
+    --bs-btn-border-color: var(--brand-emerald);
+    --bs-btn-hover-bg: rgb(0, 170, 128); /* Un tono più scuro per l'hover */
+    --bs-btn-hover-border-color: rgb(0, 170, 128);
+    --bs-btn-active-bg: rgb(0, 150, 110);
+    --bs-btn-active-border-color: rgb(0, 150, 110);
+    --bs-btn-disabled-bg: var(--brand-emerald);
+    --bs-btn-disabled-border-color: var(--brand-emerald);
+    
+    /* Colore del testo sul pulsante */
+    --bs-btn-color: #000; 
+    font-weight: 700;
+}
+
+[data-bs-theme="dark"] body {
+    color: #ffffff; /* Testo base bianco puro in dark mode */
+}
+
+[data-bs-theme="light"] body {
+    color: #A1A1A; /* Testo base Charcoal Black in light mode */
+}
+
+/* Assicura che l'immagine del logo riceva correttamente il colore del testo per la scritta */
+header img {
+    color: inherit;
+}
+
+.btn-link:hover {
+    color: var(--brand-emerald) !important;
+}
+
+@media (max-width: 576px) {
+    h1 {
+        letter-spacing: -1px !important;
+        font-size: calc(1.8rem + 1.5vw) !important;
+    }
+}
