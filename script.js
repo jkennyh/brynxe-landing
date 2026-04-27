@@ -2,14 +2,14 @@ const translations = {
     it: {
         badge: "In arrivo",
         title: "Bring your Expertise",
-        description: "La prima piattaforma peer-to-peer per scambiare competenze reali. Trasforma il tuo tempo in conoscenza.",
+        description: "L'evoluzione dello scambio competenze peer-to-peer. Trasforma la tua expertise in valore reale.",
         cta: "Unisciti alla waitlist",
         rights: "Tutti i diritti riservati."
     },
     en: {
         badge: "Coming Soon",
         title: "Bring your Expertise",
-        description: "The first peer-to-peer platform to exchange real skills. Turn your time into knowledge.",
+        description: "The evolution of peer-to-peer skill exchange. Turn your expertise into real value.",
         cta: "Join the waitlist",
         rights: "All rights reserved."
     }
